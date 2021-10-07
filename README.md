@@ -1,12 +1,12 @@
-# Proyecto modelado y simulación
+#  Modeling and simulation project 
 
-## Integrantes
-- Gerardo (Relaciones públicas)
-- Juan Pablo Maldonado Castro (Líder de tecnología)
-- María Lucrecia Beltz Gonzalez (Líder de proyecto)
+## Team members
+- Gerardo (Public relations)
+- Juan Pablo Maldonado Castro (Technology leader)
+- María Lucrecia Beltz Gonzalez (Proyect leader)
 
-## Área de proyecto
-Sistemas dinámicos
+## Area
+Dynamical systems
 
-## Lenguaje de programación
+## Programming Language
 Python
