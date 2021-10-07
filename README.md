@@ -1,5 +1,7 @@
 #  Modeling and simulation project 
 
+UNAM - ENES Morelia
+
 ## Team members
 - Gerardo (Public relations)
 - Juan Pablo Maldonado Castro (Technology leader)
@@ -9,4 +11,4 @@
 Dynamical systems
 
 ## Programming Language
-Python
+Python3
