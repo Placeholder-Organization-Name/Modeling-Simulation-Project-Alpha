@@ -3,9 +3,9 @@
 UNAM - ENES Morelia
 
 ## Team members
-- Gerardo (Public relations)
-- [Juan Pablo Maldonado Castro](maldonadocastrojp@gmail.com) (Technology leader)
-- María Lucrecia Beltz Gonzalez (Project leader)
+- Public relations: Gerardo
+- Technology leader: Juan Pablo Maldonado Castro (maldonadocastrojp@gmail.com)
+- Project leader: María Lucrecia Beltz Gonzalez
 
 ## Area
 Dynamical systems
