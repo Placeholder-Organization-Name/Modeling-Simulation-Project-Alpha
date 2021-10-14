@@ -12,7 +12,7 @@ Dynamical systems
 
 ### Examples of Dynamical Systems
 
-A dynamical system determines future states from a model given its current state. There are different simulations regarding these, some examples are:
+A dynamical system determines future states from a model given its current state. There are lots of different examples regarding these, some are:
 
 * N-body model: consists of a dynamical system of particles that interact through physical forces such as gravity.
 * Elastic pendulum model: a system which consists of a mass attached to a spring and its future movement behavior is established by its initial conditions.
