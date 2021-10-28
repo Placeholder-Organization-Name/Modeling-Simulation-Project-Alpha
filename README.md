@@ -41,7 +41,7 @@ The equations of motion for a particle of index $i$ in a system containing $N$ p
 
 ### Mars
 
-Mars, the fourth planet in the Solar System and second smallest (just after Mercury). It counts with a total of two natural satellites: *Fobos* and *Deimos*.
+Mars, the fourth planet in the Solar System and second smallest (just after Mercury). It counts with a total of two natural satellites: *Phobos* and *Deimos*.
 
 ## Hypothesis 
 
