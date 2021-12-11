@@ -59,6 +59,12 @@ The basic idea of the N-body problem came in 1687 with Isaac Newton's work *Prin
 
 Due to these issues, there aren't analytical solutions to the N-Body problem. Leading us to the use of numerical methods that are capable of tracking and moving the position of each particle in the system given some initial data. This results in numerical solutions whose accuracy tends to have really satisfactory results for long periods of time. Allowing us to give approximate solution to lots of problems of this nature.
 
+## Herramientas de software 
+Para el desarrollo del proyecto principalmente se usarán principios de física como son el principio de superposición de fuerzas, la ley de la gravitación universal y la segunda ley de Newton. Usando métodos númericos de integración de orden 0 (Riemman) o de orden 1 (Taprecio), a partir del avace. Se implementara bajo el lenguaje de programción python 3 y sus diferentes librerias: matplotlib, math, scipy, numpy, entre otras.
+
+## Fuente de datos actual
+Greengard, L. (1990). *The Numerical Solution of the N-Body Problem*. https://aip.scitation.org/doi/pdf/10.1063/1.4822898
+
 ## Bibliography
 
 Aarseth, S. (2003). *Gravitational N-Body Simulations: Tools and Algorithms*. Cambridge Press.
