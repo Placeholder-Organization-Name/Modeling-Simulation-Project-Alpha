@@ -3,9 +3,9 @@
 [UNAM - ENES Morelia](https://www.enesmorelia.unam.mx/)
 
 ## Team members
-- Public relations: Gerardo Zabdiel Martinez Zavala(gm546161@gmail.com)
+- Public relations: Gerardo Zabdiel Martinez Zavala
 - Technology leader: Juan Pablo Maldonado Castro (maldonadocastrojp@gmail.com)
-- Project leader: María Lucrecia Beltz Gonzalez
+- Project leader: María Lucrecia Beltz Gonzalez (lucreciabeltz@gmail.com)
 
 ## Area
 Dynamical systems
@@ -58,6 +58,9 @@ For this implementation, the data from celestial bodies within our Solar System 
 The basic idea of the N-body problem came in 1687 with Isaac Newton's work *Principia*. The capability of describing the interaction between different particles through Newton's second law of motion with equations brought a lot of attention and investigation to reach the solution of the problem. Later, the limitations of this problem were found by Henry Poincaré: something known as the non-integrability principle. Which would occur whenever there were three or more bodies in the problem.
 
 Due to these issues, there aren't analytical solutions to the N-Body problem. Leading us to the use of numerical methods that are capable of tracking and moving the position of each particle in the system given some initial data. This results in numerical solutions whose accuracy tends to have really satisfactory results for long periods of time. Allowing us to give approximate solution to lots of problems of this nature.
+
+## Arquitectura del proyecto
+El proyecto requiere de un integrador de los antes mencionados, la informacion especificica de cada particula y un visualizador.
 
 ## Herramientas de software 
 Para el desarrollo del proyecto principalmente se usarán principios de física como son el principio de superposición de fuerzas, la ley de la gravitación universal y la segunda ley de Newton. Usando métodos númericos de integración de orden 0 (Riemman) o de orden 1 (Taprecio), a partir del avace. Se implementara bajo el lenguaje de programción python 3 y sus diferentes librerias: matplotlib, math, scipy, numpy, entre otras.
