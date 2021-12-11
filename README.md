@@ -3,7 +3,7 @@
 [UNAM - ENES Morelia](https://www.enesmorelia.unam.mx/)
 
 ## Team members
-- Public relations: Gerardo
+- Public relations: Gerardo Zabdiel Martinez Zavala
 - Technology leader: Juan Pablo Maldonado Castro (maldonadocastrojp@gmail.com)
 - Project leader: María Lucrecia Beltz Gonzalez
 
