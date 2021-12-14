@@ -74,7 +74,7 @@ At the moment, the source of data for this project will come from the previously
 
 ## Bibliography
 
-Aarseth, S. (2003). *Gravitational N-Body Simulations: Tools and Algorithms*. Cambridge Press.
+Aarseth, S. (2003). *Gravitational N-Body Simulations: Tools and Algorithms* [Chapter 1. The N-Body Problem]. Cambridge Press.
 
 Batnagar and Saha (1992). *N-Body Problem*. Astronomical Society of India, Bulletin. http://adsabs.harvard.edu/full/1993BASI...21....1B 
 
