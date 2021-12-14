@@ -38,11 +38,6 @@ The equations of motion for a particle of index $i$ in a system containing $N$ p
 ![equation](https://latex.codecogs.com/gif.latex?\ddot{\textbf{r}}&space;=&space;-G\sum_{j=1;j\neq&space;i}^{N}\frac{m_j(\textbf{r}_i&space;-&space;\textbf{r}_j)}{|\textbf{r}_i&space;-&space;\textbf{r}_j|^3})
 
 
-
-### Mars
-
-Mars, the fourth planet in the Solar System and second smallest (just after Mercury). It counts with a total of two natural satellites: *Phobos* and *Deimos*.
-
 ## Hypothesis 
 
 Given the initial data of a set of celestial bodies (position, speed and mass), it's possible to simulate its orbits. This would be done with the help of the Newton's Law of Gravity and the implementation of the N-body problem. 
@@ -51,7 +46,9 @@ Given the initial data of a set of celestial bodies (position, speed and mass), 
 
 Simulate the orbits of a set of celestial bodies from the Solar System. This will be done through the implementation of an N-body simulation using one of the different numerical integration methods applied to this problem (some of them are force polynomials, Hermite and individual time-steps).
 
-For this implementation, the data from celestial bodies within our Solar System can be extracted from [Horizon's System](https://ssd.jpl.nasa.gov/horizons/app.html#/). This site provides real-time position and velocity components of planets, satellites, asteroids, spacecraft, etc., alongisde some future predictions.
+For this implementation, the data from celestial bodies within our Solar System can be extracted from [Horizon's System](https://ssd.jpl.nasa.gov/horizons/app.html#/). This site provides real-time position and velocity components of planets, satellites, asteroids, spacecraft, etc., alongisde some future predictions of its own.
+
+The intention is to be able to use any of the celestial bodies that is provided by this system. However, the first objective is to reach out a first solution of the planets of the Solar System.
 
 ## Justification
 
@@ -59,17 +56,26 @@ The basic idea of the N-body problem came in 1687 with Isaac Newton's work *Prin
 
 Due to these issues, there aren't analytical solutions to the N-Body problem. Leading us to the use of numerical methods that are capable of tracking and moving the position of each particle in the system given some initial data. This results in numerical solutions whose accuracy tends to have really satisfactory results for long periods of time. Allowing us to give approximate solution to lots of problems of this nature.
 
-## Arquitectura del proyecto
-El proyecto requiere de un integrador de los antes mencionados, la informacion especificica de cada particula y un visualizador.
+## Project architecture
 
-## Herramientas de software 
-Para el desarrollo del proyecto principalmente se usarán principios de física como son el principio de superposición de fuerzas, la ley de la gravitación universal y la segunda ley de Newton. Usando métodos númericos de integración de orden 0 (Riemman) o de orden 1 (Taprecio), a partir del avace. Se implementara bajo el lenguaje de programción python 3 y sus diferentes librerias: matplotlib, math, scipy, numpy, entre otras.
+For the development of this project, it's necessary to implement the physics principles of gravitational laws and the superposition principle. In order to achieve this, some essential steps in order to solve this problem are the following. 
 
-## Fuente de datos actual
-Greengard, L. (1990). *The Numerical Solution of the N-Body Problem*. https://aip.scitation.org/doi/pdf/10.1063/1.4822898
+First of all, it's important to define and store the information related to each object in this system (particles). For this we must count with data structures such as classes and arrays in order to keep track of their positions, velocities, and applied forces. Also, in order to solve the system it's essential to count with an integrator. In this case we could use any numerical integration method; for this project we're gonna test the trapezium and Riemann methods (also as a future possiblity some other methods we may fin and even the *scipy* library integrator). Finally another important element is how to display the results. For this project we're gonna be depending on some library graphing tools that display in a 3D space the positions of the particles at a given time.
+
+## Software tools
+The software tools to be used in this project will be from several libraries of Python3. These are the following:
+* matplotlib
+* math
+* scipy and numpy (depends on further development)
+
+## Data for the project
+At the moment, the source of data for this project will come from the previously mentioned website: https://ssd.jpl.nasa.gov/horizons/app.html#/
+
 
 ## Bibliography
 
 Aarseth, S. (2003). *Gravitational N-Body Simulations: Tools and Algorithms*. Cambridge Press.
 Batnagar and Saha (1992). *N-Body Problem*. Astronomical Society of India, Bulletin. http://adsabs.harvard.edu/full/1993BASI...21....1B 
 Greengard, L. (1990). *The Numerical Solution of the N-Body Problem*. https://aip.scitation.org/doi/pdf/10.1063/1.4822898
+
+
