@@ -19,9 +19,9 @@ Python3
 
 ### The N-body problem
 
-One of the most well-known physics problems in dynamical systems is the **N-body problem**. It consists in predicting the movement of various celestial bodies that are in constant interaction by theNewton's Law of Gravity. The classical physical problem is as follows:
+One of the most well-known physics problems in dynamical systems is the **N-body problem**. It consists in predicting the movement of various bodies (such as particles or celestial bodies) that are in constant interaction by Newton's Law of Gravity. The classical physical problem is as follows:
 
-Given the initial orbital properties (current position, speed and time) of a group of celestial bodies; predict all their interactive forces resulting in the prediction of its future orbits.
+Given the initial orbital properties (current position, speed and time) of a group of bodies; predict all their interactive forces resulting in the prediction of its future orbits.
 
 The equations of motion for a particle of index i in a system containing N particles are:
 
