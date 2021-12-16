@@ -1,6 +1,6 @@
 # N-Body Simulation: visualizing the Solar System's planetary orbits
 
-[UNAM - ENES Morelia](https://www.enesmorelia.unam.mx/)
+This is the project for the course of Modeling and Simulation at [UNAM - ENES Morelia](https://www.enesmorelia.unam.mx/).
 
 ## Team members
 - Public relations: Gerardo Zabdiel Martinez Zavala
