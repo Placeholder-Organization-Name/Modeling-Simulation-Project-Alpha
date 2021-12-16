@@ -18,7 +18,7 @@ One of the most well-known physics problems in dynamical systems is the **N-body
 
 Given the initial orbital properties (current position, speed and time) of a group of celestial bodies; predict all their interactive forces resulting in the prediction of its future orbits.
 
-The equations of motion for a particle of index $i$ in a system containing $N$ particles are:
+The equations of motion for a particle of index i in a system containing N particles are:
 
 ![equation](https://latex.codecogs.com/gif.latex?\ddot{\textbf{r}}&space;=&space;-G\sum_{j=1;j\neq&space;i}^{N}\frac{m_j(\textbf{r}_i&space;-&space;\textbf{r}_j)}{|\textbf{r}_i&space;-&space;\textbf{r}_j|^3})
 
