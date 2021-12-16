@@ -3,7 +3,7 @@
 This is the project for the course of Modeling and Simulation at [UNAM - ENES Morelia](https://www.enesmorelia.unam.mx/).
 
 ## Team members
-- Public relations: Gerardo Zabdiel Martinez Zavala
+- Public relations: Gerardo Zabdiel Martinez Zavala (gm546161@gmail.com)
 - Technology leader: Juan Pablo Maldonado Castro (maldonadocastrojp@gmail.com)
 - Project leader: María Lucrecia Beltz Gonzalez (lucreciabeltz@gmail.com)
 
