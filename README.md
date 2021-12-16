@@ -1,4 +1,4 @@
-# Modeling and simulation project 
+# N-Body Simulation: visualizing the Solar System's planetary orbits
 
 [UNAM - ENES Morelia](https://www.enesmorelia.unam.mx/)
 
@@ -6,21 +6,6 @@
 - Public relations: Gerardo Zabdiel Martinez Zavala
 - Technology leader: Juan Pablo Maldonado Castro (maldonadocastrojp@gmail.com)
 - Project leader: María Lucrecia Beltz Gonzalez (lucreciabeltz@gmail.com)
-
-## Area
-Dynamical systems
-
-### Examples of Dynamical Systems
-
-A dynamical system determines future states from a model given its current state. There are lots of different examples regarding these, some are:
-
-* N-body model: consists of a dynamical system of particles that interact through physical forces such as gravity.
-* Elastic pendulum model: a system which consists of a mass attached to a spring and its future movement behavior is established by its initial conditions.
-* Population dynamical system: these are models that evaluate size and age of populations through mathematical interpretations.
-* Double pendulum: in a similar fashion to the elastic pendulum mode, it consists of a pendulum attached to another pendulum whose movement will depend on its initial conditions.
-* Bouncing ball dynamic model: given an initial throw, this model evaluates the bouncing of the ball according to the conditions of the surface, the ball and its throw.
-
-The main reference for this information was extracted from [this Wikipedia article](https://en.wikipedia.org/wiki/Dynamical_system). For a further understanding of the examples of these systems, there are more articles and information about them online.
 
 ## Programming Language
 Python3
@@ -48,7 +33,7 @@ Simulate the orbits of a set of celestial bodies from the Solar System. This wil
 
 For this implementation, the data from celestial bodies within our Solar System can be extracted from [Horizon's System](https://ssd.jpl.nasa.gov/horizons/app.html#/). This site provides real-time position and velocity components of planets, satellites, asteroids, spacecraft, etc., alongisde some future predictions of its own.
 
-The intention is to be able to use any of the celestial bodies that is provided by this system. However, the first objective is to reach out a first solution of the planets of the Solar System.
+The intention is to be able to use any of the celestial bodies that is provided by this system. However, the first objective is to reach out a first solution of the planets of the Solar System. The steps to be accomplished will consist of doing an initial test with a Sun-Earth model, followed by a Sun-Earth-Jupyter, and so on; the main idea is to add planets by size of mass (greatest to lowest) with the exception of Earth being the initial one. By the end of the project, we will finally reach the result of the whole Solar System planet model.
 
 ## Justification
 
@@ -60,7 +45,9 @@ Due to these issues, there aren't analytical solutions to the N-Body problem. Le
 
 For the development of this project, it's necessary to implement the physics principles of gravitational laws and the superposition principle. In order to achieve this, some essential steps in order to solve this problem are the following. 
 
-First of all, it's important to define and store the information related to each object in this system (particles). For this we must count with data structures such as classes and arrays in order to keep track of their positions, masses, velocities, and applied forces. Also, in order to solve the system it's essential to count with an integrator. In this case we could use any numerical integration method; for this project we're gonna test the trapezium and Riemann methods (also as a future possiblity some other methods we may fin and even the *scipy* library integrator). Finally another important element is how to display the results. For this project we're gonna be depending on some library graphing tools that display in a 3D space the positions of the particles at a given time.
+First of all, it's important to define and store the information related to each object in this system (particles). For this we must count with data structures such as classes and arrays in order to keep track of their positions, masses, velocities, and applied forces. Also, in order to solve the system it's essential to count with an integrator. In this case we could use any numerical integration method; for this project we're gonna test the trapezium and Riemann methods (also as a future possiblity some other methods we may find and even the *scipy* library integrator). Finally, another important element is how to display the results. For this project we're gonna be depending on some library graphing tools that display in a 3D space the positions of the particles at a given time.
+
+The final output of the project will most likely be an animated graphic of the orbits taken by the particles within the system (something like an in-library matplotlib animation, GIF or mp4 file, this is yet to be defined). Of course, this kind of output needs data to plot the points; so through the backend performance of the operation there will be a numerical output in a file that keeps track of the position of each particle through every iteration.
 
 ## Software tools
 The software tools to be used in this project will be from several libraries of Python3. These are the following:
@@ -74,8 +61,8 @@ At the moment, the source of data for this project will come from the previously
 
 ## Bibliography
 
+For the elaboration of the theorical description of the problem, we used the introductory explanations of these resources:
+
 Aarseth, S. (2003). *Gravitational N-Body Simulations: Tools and Algorithms* [Chapter 1. The N-Body Problem]. Cambridge Press.
 
 Batnagar and Saha (1992). *N-Body Problem*. Astronomical Society of India, Bulletin. http://adsabs.harvard.edu/full/1993BASI...21....1B 
-
-
