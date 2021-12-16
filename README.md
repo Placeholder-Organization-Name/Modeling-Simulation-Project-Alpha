@@ -7,7 +7,12 @@
 - Technology leader: Juan Pablo Maldonado Castro (maldonadocastrojp@gmail.com)
 - Project leader: María Lucrecia Beltz Gonzalez (lucreciabeltz@gmail.com)
 
+## Area
+
+Dynamical Systems
+
 ## Programming Language
+
 Python3
 
 ## Introduction
