@@ -31,14 +31,10 @@ class container():
             particle.print_position()
         
 class integrator():
-    t0 = 0.0
     dt = 0.01 #sec
-    steps = 1
     M=0
     def __init__(self, t0, dt, steps, M):
-        self.t0 = t0
         self.dt = dt
-        self.steps = steps
         self.M = M
 
     def riemman(self, container):
