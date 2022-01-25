@@ -155,7 +155,7 @@ class Integrator
 int main() 
 {	
 	//ofstream myfile;
-	double dt = 86400/2; // 1 day = 86400s
+	double dt = 86400/4; // 1 day = 86400s
 	long M;
 	long N = 365*165*2;//3.6*24*365;
 
@@ -175,26 +175,6 @@ int main()
 	}
 
 	Container c1 = Container(system);
-	/*
-	Particle sun = Particle(1.989e30,
-				{0,0,0},
-				{0,0,0});
-	Particle mercury = Particle(3.302e23,
-                   {(5.370984669850484e7)*1000, (-3.435791073681850e6)*1000, (-7.402378779881026e6)*1000},
-                   {(-3.925910490738930)*1000,  (4.461953731637897e1)*1000,  (2.424255364451955e1)*1000});
-
-	Particle venus = Particle(48.685e23,
-                 {(-1.015245425299603e7)*1000,  (9.746038667700523e7)*1000,  (4.449519499322341e7)*1000},
-                 {(-3.498377595558839e1)*1000, (-3.989965575374048)*1000,  (4.181483138914464e-1)*1000});	
-	
-	Particle earth = Particle(5.97219e24,
-                 {(-2.612780096546947e7)*1000,  (1.328257092873096e8)*1000,  (5.757956049170333e7)*1000},
-                 {(-2.981220585156541e1)*1000, (-4.955837661520193)*1000, (-2.146951314180731)*1000});
-	
-		
-	vector<Particle> system = {sun,mercury, venus,earth};
-	Container c1 = Container(system);
-	*/
 	M = system.size();
 	c1.printPos();
 	Integrator s1 = Integrator(dt,M);
