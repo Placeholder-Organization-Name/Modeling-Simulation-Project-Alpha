@@ -115,14 +115,20 @@ class Integrator
 				if(i == j) {continue;}
 				Particle p_i = container.particles[i];
 				vector<long double> u = p_j.u(p_i);
+				
 				//cout << "u = " << u[0] <<","<<u[1]<<","<<u[2] << endl;
 				long double r = sqrt(u[0]*u[0] + u[1]*u[1] + u[2]*u[2]);
 				long double C = (G*p_j.mass * p_i.mass / (pow(r,3)));
 				vector<long double> F = constVecMult(C,u);
+				
+				//cout << "F = " << F[0] <<", " << F[1] << " " << F[2]<<endl; 
 				vector<long double> V = constVecMult(dt/p_j.mass, F);
-				container.particles[j].vel = vecSum(p_j.vel, V); 
+
+
+				//cout << "V =" << V[0] << " " << V[1] << " " << V[2] << endl;
+				container.particles[j].vel = vecSum(container.particles[j].vel, V); 
 				//cout << "VEL = ";
-				///container.particles[j].printVel();
+				//container.particles[j].printVel();
 			}
 		}
 
@@ -132,11 +138,14 @@ class Integrator
 			Particle p_j = container.particles[j];
 			vector<long double> aux = vecSum(p_j.pos,constVecMult(dt,p_j.vel));
 			vector<long double> aux1 = constVecMult(dt,p_j.vel);
+			//cout << "dt =" << dt << endl;
+			//cout << "vel = " <<p_j.vel[0] << " " << p_j.vel[1] << " " << p_j.vel[2] << endl;
 			//cout << "vel: ";
 			//p_j.printVel();
 			//cout << "dt: " << dt << endl;
 			//cout << "dt*vel = " << aux[0] << ","<<aux[1]<<","<<aux[2]<<endl;
 			container.particles[j].pos = vecSum(p_j.pos,constVecMult(dt,p_j.vel));
+			//cout << "pos = " << container.particles[j].pos[0] << " " << container.particles[j].pos[1] << " " << container.particles[j].pos[2] << endl;
 		}
 		
 		return container;
@@ -146,21 +155,51 @@ class Integrator
 int main() 
 {	
 	//ofstream myfile;
-	double dt = 10;
-	long M = 2;
-	long N = 360*24*365;
-	
-	//Particle p0 = Particle(5.97219e24, {1.254473135270987e8,7.989253580632259e7,-4.538421117581427e3}, {-1.647481425365000e1,2.501407751815827e1,-2.070996177010898E-03}); //Tierra
+	double dt = 86400/2; // 1 day = 86400s
+	long M;
+	long N = 365*165*2;//3.6*24*365;
 
-	//Particle p1 = Particle(1988500e24, {0, 0, 0}, {0,0,0});
+	long double mass, x, y, z, vx, vy, vz;
+	string name;
+
+	vector<string> names;
+	vector<Particle> system;
+
+	cin >> M;
+	//N particles, name,  mass, X, Y, Z, Vx, Vy, Vz
+	for(int i = 0; i < M; i++)
+	{
+		cin >> name >> mass >> x >> y >> z >> vx >> vy >> vz;
+		names.push_back(name);
+		system.push_back(Particle(mass, {x*1000, y*1000, z*1000}, {vx*1000, vy*1000, vz*1000}));
+	}
+
+	Container c1 = Container(system);
+	/*
+	Particle sun = Particle(1.989e30,
+				{0,0,0},
+				{0,0,0});
+	Particle mercury = Particle(3.302e23,
+                   {(5.370984669850484e7)*1000, (-3.435791073681850e6)*1000, (-7.402378779881026e6)*1000},
+                   {(-3.925910490738930)*1000,  (4.461953731637897e1)*1000,  (2.424255364451955e1)*1000});
+
+	Particle venus = Particle(48.685e23,
+                 {(-1.015245425299603e7)*1000,  (9.746038667700523e7)*1000,  (4.449519499322341e7)*1000},
+                 {(-3.498377595558839e1)*1000, (-3.989965575374048)*1000,  (4.181483138914464e-1)*1000});	
 	
-	Particle p0 = Particle(1.98e30, {0,0,0}, {0,0,0});
-	Particle p1 = Particle(5.97e24, {1.25e8*1000,7.98e7*1000,-4.53e3*1000}, {-1.647481425365000e1*1000,2.501407751815827e1*1000,-2.070996177010898e-3*1000});
-	Container c1 = Container({p0,p1});	
+	Particle earth = Particle(5.97219e24,
+                 {(-2.612780096546947e7)*1000,  (1.328257092873096e8)*1000,  (5.757956049170333e7)*1000},
+                 {(-2.981220585156541e1)*1000, (-4.955837661520193)*1000, (-2.146951314180731)*1000});
 	
-	//c1.printPos();
+		
+	vector<Particle> system = {sun,mercury, venus,earth};
+	Container c1 = Container(system);
+	*/
+	M = system.size();
+	c1.printPos();
 	Integrator s1 = Integrator(dt,M);
-	cout << "Performing " << N << "operation " << endl;	
+	//cout << ":)" << endl;
+	cout << "Performing " << N << "operation " << endl;
 	myfile.open("example.txt");
 
 	myfile << M << "\t" <<N<<"\n";
@@ -170,6 +209,11 @@ int main()
 		c1 = s1.riemman(c1);
 		//c1.printPos();
 		c1.writePos();
+	}
+
+	for(auto c: names)
+	{
+	myfile << c << endl;
 	}
 	myfile.close();
 	return 0;
